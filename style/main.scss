@@ -72,6 +72,7 @@ html {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
+  width: 100%;
   &__color {
     background-color: $main-color-pink-1;
     min-height: 100vh;
@@ -90,7 +91,7 @@ html {
     align-self: center;
     &__left {
       grid-column: 1 / 4;
-      box-shadow: -1rem 0.5rem 2rem rgb(129, 129, 129);
+      box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.658);
       background-color: $main-color-pink-2;
       display: grid;
       justify-items: center;
@@ -222,6 +223,165 @@ html {
     &__social a:link,
     &__social a {
       color: black;
+    }
+  }
+}
+.resume {
+  display: grid;
+  justify-items: center;
+  background-color: $main-color-pink-2;
+  width: 100vw;
+  min-height: 100vh;
+
+  &__content {
+    min-width: 70rem;
+    display: grid;
+    row-gap: 4rem;
+    &__heading {
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      font-size: 3.5rem;
+      font-weight: 700;
+      justify-self: center;
+      &__square {
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: $main-color-blue;
+        margin-right: 1rem;
+      }
+    }
+    &__education {
+      width: 72.4rem;
+      height: 36.75rem;
+      background: white;
+      box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__details {
+        width: 50%;
+        padding: 2rem;
+        &__date {
+          font-size: 2rem;
+          color: $main-color-blue;
+          font-weight: 700;
+        }
+        &__name {
+          font-size: 2rem;
+        }
+        &__degree {
+          font-size: 1.4rem;
+        }
+        &__location {
+          font-size: 1.4rem;
+        }
+      }
+      &__description {
+        font-size: 1.7rem;
+        width: 50%;
+        padding: 2rem;
+        &__text {
+        }
+      }
+      &__heading {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+    }
+    &__skillset {
+      width: 72.4rem;
+      height: 36.75rem;
+      background: white;
+      box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+      margin-bottom: 4rem;
+      display: grid;
+      justify-items: center;
+
+      &__heading {
+        font-size: 2.5rem;
+        font-weight: 700;
+        padding: 2rem;
+      }
+      &__square {
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: $main-color-blue;
+        display: inline-block;
+        margin-right: 1rem;
+      }
+      &__skill {
+        display: grid;
+        &__item {
+          font-size: 1.4rem;
+        }
+        &__item:nth-of-type(1) {
+          justify-self: start;
+          grid-row: 1 / 2;
+        }
+        &__item:nth-of-type(2) {
+          justify-self: end;
+          grid-row: 1 / 2;
+        }
+        &__item:nth-of-type(3) {
+          justify-self: start;
+          grid-row: 3 / 4;
+        }
+        &__item:nth-of-type(4) {
+          justify-self: end;
+          grid-row: 3 / 4;
+          margin-left: 4rem;
+        }
+      }
+      &__language {
+        &__heading {
+          padding: 2rem;
+          font-size: 2.5rem;
+          font-weight: 700;
+        }
+        &__item {
+          font-weight: 300;
+        }
+      }
+    }
+    &__job {
+      width: 72.4rem;
+      height: 36.75rem;
+      background: white;
+      box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__heading {
+        font-size: 2.5rem;
+        justify-self: start;
+      }
+      &__details {
+        width: 50%;
+        padding: 2rem;
+        &__date {
+          font-size: 2rem;
+          color: $main-color-blue;
+          font-weight: 700;
+        }
+        &__position {
+          font-size: 2rem;
+        }
+        &__name {
+          font-size: 1.4rem;
+        }
+        &__location {
+          font-size: 1.4rem;
+        }
+      }
+      &__description {
+        font-size: 1.7rem;
+        width: 50%;
+        padding: 2rem;
+        &__text {
+        }
+      }
     }
   }
 }

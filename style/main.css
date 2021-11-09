@@ -92,6 +92,7 @@ html {
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   position: relative;
+  width: 100%;
 }
 
 .main__color {
@@ -125,8 +126,8 @@ html {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
-  -webkit-box-shadow: -1rem 0.5rem 2rem #818181;
-          box-shadow: -1rem 0.5rem 2rem #818181;
+  -webkit-box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.658);
+          box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.658);
   background-color: #f4ece6;
   display: -ms-grid;
   display: grid;
@@ -299,5 +300,222 @@ html {
 .footer__contacts__social a:link,
 .footer__contacts__social a {
   color: black;
+}
+
+.resume {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  background-color: #f4ece6;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.resume__content {
+  min-width: 70rem;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 4rem;
+}
+
+.resume__content__heading {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  justify-self: center;
+}
+
+.resume__content__heading__square {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #3473ff;
+  margin-right: 1rem;
+}
+
+.resume__content__education {
+  width: 72.4rem;
+  height: 36.75rem;
+  background: white;
+  -webkit-box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+          box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resume__content__education__details {
+  width: 50%;
+  padding: 2rem;
+}
+
+.resume__content__education__details__date {
+  font-size: 2rem;
+  color: #3473ff;
+  font-weight: 700;
+}
+
+.resume__content__education__details__name {
+  font-size: 2rem;
+}
+
+.resume__content__education__details__degree {
+  font-size: 1.4rem;
+}
+
+.resume__content__education__details__location {
+  font-size: 1.4rem;
+}
+
+.resume__content__education__description {
+  font-size: 1.7rem;
+  width: 50%;
+  padding: 2rem;
+}
+
+.resume__content__education__heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.resume__content__skillset {
+  width: 72.4rem;
+  height: 36.75rem;
+  background: white;
+  -webkit-box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+          box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+  margin-bottom: 4rem;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+.resume__content__skillset__heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+
+.resume__content__skillset__square {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #3473ff;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.resume__content__skillset__skill {
+  display: -ms-grid;
+  display: grid;
+}
+
+.resume__content__skillset__skill__item {
+  font-size: 1.4rem;
+}
+
+.resume__content__skillset__skill__item:nth-of-type(1) {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.resume__content__skillset__skill__item:nth-of-type(2) {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.resume__content__skillset__skill__item:nth-of-type(3) {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+.resume__content__skillset__skill__item:nth-of-type(4) {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+  margin-left: 4rem;
+}
+
+.resume__content__skillset__language__heading {
+  padding: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.resume__content__skillset__language__item {
+  font-weight: 300;
+}
+
+.resume__content__job {
+  width: 72.4rem;
+  height: 36.75rem;
+  background: white;
+  -webkit-box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+          box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.resume__content__job__heading {
+  font-size: 2.5rem;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.resume__content__job__details {
+  width: 50%;
+  padding: 2rem;
+}
+
+.resume__content__job__details__date {
+  font-size: 2rem;
+  color: #3473ff;
+  font-weight: 700;
+}
+
+.resume__content__job__details__position {
+  font-size: 2rem;
+}
+
+.resume__content__job__details__name {
+  font-size: 1.4rem;
+}
+
+.resume__content__job__details__location {
+  font-size: 1.4rem;
+}
+
+.resume__content__job__description {
+  font-size: 1.7rem;
+  width: 50%;
+  padding: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
