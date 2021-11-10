@@ -72,8 +72,10 @@ function renderAboutMe() {
   social.append(socialIcon1, socialIcon2, socialIcon3, socialIcon4);
   card.append(cardLeftSide, cardRightSide);
   main.append(emptyColorDiv, emptyWhiteDiv, card);
-}
 
+  resumeBtn.addEventListener("click", renderResume);
+  projectsBtn.addEventListener("click", renderProjects);
+}
 function renderResume() {
   main.innerHTML = null;
 
@@ -291,10 +293,101 @@ function renderResume() {
   );
 }
 
-function renderProjects() {}
+function renderProjects() {
+  //Emptying main div
+  main.innerHTML = null;
+  //Creating classes
+  const mainDiv = document.createElement("div");
+  const mainContent = document.createElement("div");
+  const heading = document.createElement("h1");
+  const paragraph = document.createElement("p");
+  const square = document.createElement("span");
 
-function renderContacts() {}
+  //Adding classes
+  mainDiv.classList.add("projects");
+  mainContent.classList.add("projects__content");
+  heading.classList.add("projects__content__heading");
+  paragraph.classList.add("projects__content__paragraph");
+  square.classList.add("projects__content__heading__square");
+  //Adding text content
+  heading.textContent = "Projects";
+  paragraph.innerHTML = `Here are the projects I have worked on during CodeAcademy courses and on my own, where I learnt various things like creating search, delete, add to favorite, saving to local storage functionalities. There are more projects that I have worked on, and they are pushed to my <a href="https://github.com/IgnasDav">Github</a>`;
+  //Inserting elements into html
+  heading.prepend(square);
+  mainContent.append(heading, paragraph);
+  mainDiv.append(mainContent);
+  main.append(mainDiv);
+  //Loop for creating 3 elements
+  for (let i = 0; i <= 2; i++) {
+    //Creating elements
+    const project = document.createElement("div");
+    const projectLeftSide = document.createElement("div");
+    const projectRightSide = document.createElement("div");
+    const projectTitle = document.createElement("h2");
+    const roleTitle = document.createElement("h3");
+    const projectText = document.createElement("p");
+    const projectImg = document.createElement("img");
+    const rectangle = document.createElement("span");
+    //Adding classes
+    project.classList.add(
+      "projects__content__project",
+      `projects__content__project--${[i]}`
+    );
+    projectLeftSide.classList.add("projects__content__project__left");
+    projectRightSide.classList.add("projects__content__project__right");
+    projectTitle.classList.add("projects__content__project__left__title");
+    roleTitle.classList.add("projects__content__project__left__role");
+    projectText.classList.add("projects__content__project__left__text");
+    projectImg.classList.add("projects__content__project__right__img");
+    rectangle.classList.add(
+      "projects__content__project__left__title__rectangle"
+    );
+
+    //Inserting content
+    if (project.classList.contains("projects__content__project--0")) {
+      projectTitle.innerHTML = `<a href ="https://github.com/IgnasDav/JavaScript-Umbrella-Weather-website">Umbrella weather Website</a>`;
+      roleTitle.textContent = "Front-End";
+      projectText.textContent =
+        "This project was done as a graduation from JavaScript course where I used weather API to draw cards with weather info and search functionality. At the front of the website there are 5 video timelapses with weather details inside the video";
+      projectImg.src = "img/Project 1.PNG";
+    }
+    if (project.classList.contains("projects__content__project--1")) {
+      projectTitle.innerHTML = `<a href ="https://github.com/IgnasDav/JavaScript-Trello-clone---Frello">Trello Clone - Frello</a>`;
+      roleTitle.textContent = "Front-End";
+      projectText.textContent =
+        "Work in progress. Currently working on this project, creating a Trello clone to hone JavaScript skills";
+      projectImg.src = "img/Project 2.PNG";
+    }
+    if (project.classList.contains("projects__content__project--2")) {
+      projectTitle.innerHTML = `<a href ="https://github.com/IgnasDav/3.-JavaScript-Project---Address-Book-app-">Address book app</a>`;
+      roleTitle.textContent = "Front-End";
+      projectText.textContent =
+        "This project was done as one of the JavaScript course projects where I learnt to implement search, edit, add to favorite and delete functionalities";
+      projectImg.src = "img/Project 3.PNG";
+    }
+    //Inserting into html
+    roleTitle.prepend(rectangle);
+    projectTitle.prepend(rectangle);
+    projectLeftSide.append(projectTitle, roleTitle, projectText);
+    projectRightSide.append(projectImg);
+    project.append(projectLeftSide, projectRightSide);
+    mainContent.append(project);
+  }
+}
+
+function renderContacts() {
+  main.innerHTML = null;
+
+  //Creating elements
+
+  //Adding classes
+
+  //Adding content
+
+  //Inserting elements into HTML
+}
 
 window.addEventListener("DOMContentLoaded", renderAboutMe);
 document.querySelector("#about").addEventListener("click", renderAboutMe);
 document.querySelector("#resume").addEventListener("click", renderResume);
+document.querySelector("#projects").addEventListener("click", renderProjects);

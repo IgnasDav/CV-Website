@@ -306,7 +306,7 @@ html {
   display: -ms-grid;
   display: grid;
   justify-items: center;
-  background-color: #f4ece6;
+  background-color: #e6dace;
   width: 100vw;
   min-height: 100vh;
 }
@@ -364,18 +364,22 @@ html {
   font-size: 2rem;
   color: #3473ff;
   font-weight: 700;
+  padding: 1rem;
 }
 
 .resume__content__education__details__name {
   font-size: 2rem;
+  padding: 1rem;
 }
 
 .resume__content__education__details__degree {
   font-size: 1.4rem;
+  padding: 1rem;
 }
 
 .resume__content__education__details__location {
   font-size: 1.4rem;
+  padding: 1rem;
 }
 
 .resume__content__education__description {
@@ -499,23 +503,146 @@ html {
   font-size: 2rem;
   color: #3473ff;
   font-weight: 700;
+  padding: 1rem;
 }
 
 .resume__content__job__details__position {
   font-size: 2rem;
+  padding: 1rem;
 }
 
 .resume__content__job__details__name {
   font-size: 1.4rem;
+  padding: 1rem;
 }
 
 .resume__content__job__details__location {
   font-size: 1.4rem;
+  padding: 1rem;
 }
 
 .resume__content__job__description {
   font-size: 1.7rem;
   width: 50%;
   padding: 2rem;
+}
+
+.projects {
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  min-height: 100vh;
+  background-color: #e6dace;
+}
+
+.projects__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 70rem;
+}
+
+.projects__content__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  font-size: 3.5rem;
+}
+
+.projects__content__heading__square {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #3473ff;
+  margin-right: 1rem;
+}
+
+.projects__content__paragraph {
+  padding: 2rem;
+  font-size: 1.7rem;
+}
+
+.projects__content__project:nth-of-type(3) {
+  margin-bottom: 4rem;
+}
+
+.projects__content__project {
+  margin-top: 4rem;
+  width: 72.4rem;
+  height: 36.75rem;
+  background: white;
+  -webkit-box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+          box-shadow: -1rem 0.5rem 2rem rgba(129, 129, 129, 0.548);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects__content__project__left {
+  width: 65%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.projects__content__project__left__title {
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: 4rem;
+  font-weight: 700;
+}
+
+.projects__content__project__left__title__rectangle {
+  height: 4.5rem;
+  width: 1rem;
+  background-color: #3473ff;
+  position: absolute;
+  left: -4.5%;
+}
+
+.projects__content__project__left__title a {
+  text-decoration: none;
+  color: #3473ff;
+}
+
+.projects__content__project__left__role {
+  font-size: 1.4rem;
+}
+
+.projects__content__project__left__text {
+  margin-top: 4rem;
+  font-size: 1.7rem;
+}
+
+.projects__content__project__right {
+  width: 35%;
+  height: 100%;
+}
+
+.projects__content__project__right__img {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */
