@@ -1,5 +1,6 @@
 "use strict";
 const main = document.querySelector(".main");
+const navItems = document.querySelectorAll(".nav__menu__item");
 
 function renderAboutMe() {
   //Emptying main html
@@ -366,7 +367,6 @@ function renderProjects() {
       projectImg.src = "img/Project 3.PNG";
     }
     //Inserting into html
-    roleTitle.prepend(rectangle);
     projectTitle.prepend(rectangle);
     projectLeftSide.append(projectTitle, roleTitle, projectText);
     projectRightSide.append(projectImg);
@@ -379,15 +379,85 @@ function renderContacts() {
   main.innerHTML = null;
 
   //Creating elements
-
+  const mainDiv = document.createElement("div");
+  const contentDiv = document.createElement("div");
+  const card = document.createElement("div");
+  const heading = document.createElement("h1");
+  const firstName = document.createElement("h2");
+  const lastName = document.createElement("h2");
+  const number = document.createElement("h2");
+  const github = document.createElement("h2");
+  const linkedin = document.createElement("h2");
+  const facebook = document.createElement("h2");
+  const gmail = document.createElement("h2");
+  const square = document.createElement("span");
+  const instagram = document.createElement("h2");
+  const linkDiv = document.createElement("div");
   //Adding classes
-
+  mainDiv.classList.add("contacts");
+  contentDiv.classList.add("contacts__content");
+  card.classList.add("contacts__content__card");
+  heading.classList.add("contacts__content__card__heading");
+  firstName.classList.add("contacts__content__card__firstName");
+  lastName.classList.add("contacts__content__card__lastName");
+  number.classList.add("contacts__content__card__number");
+  linkDiv.classList.add("contacts__content__card__link");
+  github.classList.add("contacts__content__card__link__item");
+  linkedin.classList.add("contacts__content__card__link__item");
+  facebook.classList.add("contacts__content__card__link__item");
+  instagram.classList.add("contacts__content__card__link__item");
+  gmail.classList.add("contacts__content__card__gmail");
+  square.classList.add("contacts__content__card__heading__square");
   //Adding content
-
+  heading.textContent = "Contacts";
+  firstName.textContent = "First-Name: Ignas";
+  lastName.textContent = "Last-Name: Davulis";
+  number.textContent = "Number: 864658646";
+  github.innerHTML = `<a href = "https://github.com/IgnasDav"> <i class="fab fa-github"></i></a>`;
+  linkedin.innerHTML = `<a href = "https://www.linkedin.com/in/ignas-davulis-883818223/" > <i class="fab fa-linkedin"></i></a>`;
+  facebook.innerHTML = `<a href = "https://www.facebook.com/IgnasDavulis/" > <i class="fab fa-facebook-f"></i></a>`;
+  instagram.innerHTML = `<a href = "https://www.instagram.com/ignas_davulis/" > <i class="fab fa-instagram"></i></a>`;
+  gmail.textContent = "Gmail: ignas321@gmail.com";
   //Inserting elements into HTML
+  heading.prepend(square);
+  linkDiv.append(github, linkedin, facebook, instagram);
+  card.append(heading, firstName, lastName, number, gmail, linkDiv);
+  contentDiv.append(card);
+  mainDiv.append(contentDiv);
+  main.append(mainDiv);
 }
 
 window.addEventListener("DOMContentLoaded", renderAboutMe);
 document.querySelector("#about").addEventListener("click", renderAboutMe);
 document.querySelector("#resume").addEventListener("click", renderResume);
 document.querySelector("#projects").addEventListener("click", renderProjects);
+document.querySelector("#contacts").addEventListener("click", renderContacts);
+
+navItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    if (e.target.textContent === "About me") {
+      navItems[1].classList.remove("current");
+      navItems[2].classList.remove("current");
+      navItems[3].classList.remove("current");
+      item.classList.add("current");
+    }
+    if (e.target.textContent === "Resume") {
+      navItems[0].classList.remove("current");
+      navItems[2].classList.remove("current");
+      navItems[3].classList.remove("current");
+      item.classList.add("current");
+    }
+    if (e.target.textContent === "Projects") {
+      navItems[0].classList.remove("current");
+      navItems[1].classList.remove("current");
+      navItems[3].classList.remove("current");
+      item.classList.add("current");
+    }
+    if (e.target.textContent === "Contacts") {
+      navItems[0].classList.remove("current");
+      navItems[1].classList.remove("current");
+      navItems[2].classList.remove("current");
+      item.classList.add("current");
+    }
+  });
+});
