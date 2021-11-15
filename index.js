@@ -182,7 +182,7 @@ function renderResume() {
       jobCompanyName.textContent = "MB Rūkyklėlė";
       jobCompanyLocation.textContent = "Verslo g. 16";
       jobDescription.textContent =
-        "Learnt how to manage my workspace and keep it clean everyday.";
+        "Met production targets with skilled and efficient work assembling products. Minimized safety hazards by maintaining clean and organized work areas.";
     }
     if (job.classList.contains("resume__content__job--1")) {
       jobDate.textContent = "2019.10 - 2020.03";
@@ -191,7 +191,7 @@ function renderResume() {
         "Vilniaus Ekstremalių Sporto Šakų Klubas 'Arena'";
       jobCompanyLocation.textContent = "Lukiškių Square";
       jobDescription.textContent =
-        "Managed day to day transactions, calculated everydays profit, helped customers get the best experience.";
+        "Processed payments and maintained detailed attendance and sales records. Improved customer satisfaction by providing information about facilities and entertainment operations. Sold tickets and collect fees from customers.";
     }
     if (job.classList.contains("resume__content__job--2")) {
       jobDate.textContent = "2019.09 - 2019.10";
@@ -199,7 +199,7 @@ function renderResume() {
       jobCompanyName.textContent = "Plus Plus Plus";
       jobCompanyLocation.textContent = "Vilniaus g. 39";
       jobDescription.textContent =
-        "Kept the bar clean, learned how to work alone and as a team.";
+        "Cleaned counter areas, sinks, and floors of stains and trash. Supported efficiency by restocking bar with wine and spirits. Cleaned and sanitized glassware to maintain availability. Maintained full ice bins throughout high-volume shifts. Scraped and stacked dirty dishes and carried dishes and other tableware to kitchens for cleaning.";
     }
   }
   //Inserting element here because we need this element right after the sequence of job elements
