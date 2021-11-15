@@ -253,7 +253,7 @@ function renderResume() {
         "Advanced Front-end courses, subjects I have graduated on are JavaScript, HTML,CSS, SCSS, Bootstrap,BEM. Next in line is Node.js, course includes these subjects JS, React, Vue.js, MongoDB, Node.js, HTML, CSS. ";
       educationDate.textContent = "2021.09 - 2022.03";
       educationName.textContent = "CodeAcademy";
-      educationDegree.textContent = "Advnaced Front-End courses";
+      educationDegree.textContent = "Advanced Front-End courses";
       educationLocation.textContent = "Antakalnio g. 17, Vilnius";
     }
     if (education.classList.contains("resume__content__education--1")) {
@@ -461,3 +461,4 @@ navItems.forEach((item) => {
     }
   });
 });
+console.log("dirt worm worm dirt dirt worm".split("dirt").length);
